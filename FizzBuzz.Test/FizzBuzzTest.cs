@@ -14,7 +14,7 @@ namespace FizzBuzz.Test
         public void FizzBuzz_Successful(int number, string expectedResult)
         {
             var fizzBuzzManager = new FizzBuzzManager();
-            var result = fizzBuzzManager.GetFizzBuzzForm(number);
+            var result = fizzBuzzManager.GetFizzBuzzFromNumber(number);
             Assert.Equal(expectedResult, result);
         }
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace FizzBuzz.Cl
 {
@@ -6,7 +7,9 @@ namespace FizzBuzz.Cl
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var numbersList = Enumerable.Range(0, 100).ToList();
+            var fizzBuzzManager = new FizzBuzzManager();
+            numbersList.ForEach(x => Console.WriteLine(fizzBuzzManager.GetFizzBuzzFromNumber(x)));
         }
     }
 }

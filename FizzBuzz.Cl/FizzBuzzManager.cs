@@ -8,7 +8,7 @@ namespace FizzBuzz.Cl
 {
     public class FizzBuzzManager
     {
-        public string GetFizzBuzzForm(int number)
+        public string GetFizzBuzzFromNumber(int number)
         {
             var fizzBuzzObj = new FizzBuzz(number);
             return fizzBuzzObj.ToString();
