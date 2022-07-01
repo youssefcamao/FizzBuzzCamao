@@ -17,7 +17,14 @@ namespace FizzBuzz.Cl
         public bool IsBuzz => Number % 5 == 0;
         public override string ToString()
         {
-            return (IsFizz ? "Fizz" : string.Empty) + (IsBuzz ? "Buzz" : string.Empty) + (!IsBuzz && !IsFizz ? $"{Number}" : string.Empty);
+            //No ifs no loops
+            var fizz = new List<string> { String.Empty, "Fizz" };
+            var buzz = new List<string> { String.Empty, "Buzz" };
+            var fizzIndex = Convert.ToInt32(IsFizz);
+            var buzzIndex = Convert.ToInt32(IsBuzz);
+            var result = new List<string> { fizz[fizzIndex] + buzz[buzzIndex], $"{Number}" };
+            var resultIndex = string.IsNullOrEmpty(result[0]);
+            return result[Convert.ToInt32(resultIndex)];
         }
     }
 }
